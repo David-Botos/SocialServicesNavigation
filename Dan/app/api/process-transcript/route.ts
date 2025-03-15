@@ -13,10 +13,7 @@ export async function POST(request: NextRequest) {
     console.log("Request body parsed successfully");
     console.log("Transcript length:", transcript?.length || 0);
 
-    // Log truncated transcript to avoid flooding logs
-    const truncatedTranscript =
-      transcript?.substring(0, 100) + (transcript?.length > 100 ? "..." : "");
-    console.log("Processing transcript (truncated):", truncatedTranscript);
+    console.log("Processing transcript:", transcript);
 
     console.log("Calling b.ExtractProblems...");
     const problemsOutput = await b.ExtractProblems(transcript);

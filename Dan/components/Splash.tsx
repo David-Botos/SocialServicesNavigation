@@ -127,8 +127,9 @@ export const Splash: React.FC<SplashProps> = ({ handleReady }) => {
         </h1>
 
         <p className="text-primary-500 text-lg font-semibold leading-relaxed">
-          In this demo, you will discuss your needs with an experienced AI that
-          extracts your needs in a structured way.
+          In this demo, you will discuss your needs as a client needing social
+          services with an experienced AI that extracts your needs in a
+          structured way.
         </p>
 
         <Button onClick={() => handleReady()}>Try Demo</Button>

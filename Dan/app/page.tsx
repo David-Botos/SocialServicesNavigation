@@ -175,7 +175,9 @@ export default function Home() {
       const transcriptString = transcript
         .map((entry) => {
           // Format: [SOURCE] Text
-          return `[${entry.source.toUpperCase()}] ${entry.text}`;
+          if (entry.source == "bot") {
+            return `[${entry.source.toUpperCase()}] ${entry.text}`;
+          }
         })
         .join("\n");
 

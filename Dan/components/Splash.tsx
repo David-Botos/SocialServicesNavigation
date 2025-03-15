@@ -36,7 +36,7 @@ export const Splash: React.FC<SplashProps> = ({ handleReady }) => {
       });
 
       const data = await response.json();
-      
+
       if (data.success) {
         setIsAuthorized(true);
         localStorage.setItem("bearHugAuthorized", "true");
@@ -69,8 +69,11 @@ export const Splash: React.FC<SplashProps> = ({ handleReady }) => {
                   {error}
                 </Alert>
               )}
-              
-              <form onSubmit={handlePasswordSubmit} className="space-y-4 w-full">
+
+              <form
+                onSubmit={handlePasswordSubmit}
+                className="space-y-4 w-full"
+              >
                 <div className="flex items-center gap-2">
                   <Lock className="size-5 text-primary-500" />
                   <Input
@@ -99,7 +102,7 @@ export const Splash: React.FC<SplashProps> = ({ handleReady }) => {
               </Button>
             </div>
           )}
-          
+
           <footer className="flex flex-col gap-2 w-full">
             <Button variant="light" asChild>
               <a
@@ -124,12 +127,8 @@ export const Splash: React.FC<SplashProps> = ({ handleReady }) => {
         </h1>
 
         <p className="text-primary-500 text-lg font-semibold leading-relaxed">
-          In this demo, you&apos;ll speak with an AI agent that introduces itself as
-          a 211 representative seeking to update service information. The agent
-          will politely ask about contact details for the best person at your
-          organization. Play along as a CBO representative to experience a
-          typical conversation, or feel free to experiment and test the system&apos;s
-          capabilities.
+          In this demo, you will discuss your needs with an experienced AI that
+          extracts your needs in a structured way.
         </p>
 
         <Button onClick={() => handleReady()}>Try Demo</Button>
@@ -149,7 +148,7 @@ export const Splash: React.FC<SplashProps> = ({ handleReady }) => {
 
           <Button variant="light" asChild>
             <a
-              href="https://github.com/David-Botos/sriracha-voice-demo"
+              href="https://github.com/David-Botos/SocialServicesNavigation"
               className="text-indigo-600"
             >
               <Book className="size-6" />

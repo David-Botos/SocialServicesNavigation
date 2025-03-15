@@ -56,7 +56,7 @@ export default function GenOutputButton({
                 d="M10 21h4m-2-3v-8m0 0L9 7m3 3l3-3M5 21a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5z"
               />
             </svg>
-            <span>Extract Contacts</span>
+            <span>Extract Problems</span>
           </>
         )}
       </button>

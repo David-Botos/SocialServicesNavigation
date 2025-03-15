@@ -20,7 +20,7 @@ import { toBamlError, BamlStream } from "@boundaryml/baml"
 import type { Checked, Check, RecursivePartialNull as MovedRecursivePartialNull } from "./types"
 import type { partial_types } from "./partial_types"
 import type * as types from "./types"
-import type {Contact, ContactInformation, Resume} from "./types"
+import type {Problem, Problems, Resume} from "./types"
 import type TypeBuilder from "./type_builder"
 import { DO_NOT_USE_DIRECTLY_UNLESS_YOU_KNOW_WHAT_YOURE_DOING_CTX, DO_NOT_USE_DIRECTLY_UNLESS_YOU_KNOW_WHAT_YOURE_DOING_RUNTIME } from "./globals"
 
@@ -45,13 +45,13 @@ export class BamlAsyncClient {
   }
 
   
-  async ExtractContactInformation(
+  async ExtractClientProblems(
       transcript: string,
       __baml_options__?: { tb?: TypeBuilder, clientRegistry?: ClientRegistry }
-  ): Promise<ContactInformation> {
+  ): Promise<Problems> {
     try {
       const raw = await this.runtime.callFunction(
-        "ExtractContactInformation",
+        "ExtractClientProblems",
         {
           "transcript": transcript
         },
@@ -59,7 +59,7 @@ export class BamlAsyncClient {
         __baml_options__?.tb?.__tb(),
         __baml_options__?.clientRegistry,
       )
-      return raw.parsed(false) as ContactInformation
+      return raw.parsed(false) as Problems
     } catch (error) {
       throw toBamlError(error);
     }
@@ -91,13 +91,13 @@ class BamlStreamClient {
   constructor(private runtime: BamlRuntime, private ctx_manager: BamlCtxManager) {}
 
   
-  ExtractContactInformation(
+  ExtractClientProblems(
       transcript: string,
       __baml_options__?: { tb?: TypeBuilder, clientRegistry?: ClientRegistry }
-  ): BamlStream<partial_types.ContactInformation, ContactInformation> {
+  ): BamlStream<partial_types.Problems, Problems> {
     try {
       const raw = this.runtime.streamFunction(
-        "ExtractContactInformation",
+        "ExtractClientProblems",
         {
           "transcript": transcript
         },
@@ -106,10 +106,10 @@ class BamlStreamClient {
         __baml_options__?.tb?.__tb(),
         __baml_options__?.clientRegistry,
       )
-      return new BamlStream<partial_types.ContactInformation, ContactInformation>(
+      return new BamlStream<partial_types.Problems, Problems>(
         raw,
-        (a): partial_types.ContactInformation => a,
-        (a): ContactInformation => a,
+        (a): partial_types.Problems => a,
+        (a): Problems => a,
         this.ctx_manager.cloneContext(),
       )
     } catch (error) {

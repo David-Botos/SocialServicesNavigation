@@ -19,7 +19,7 @@ import type { BamlRuntime, FunctionResult, BamlCtxManager, Image, Audio, ClientR
 import { toBamlError } from "@boundaryml/baml"
 import type { Checked, Check, RecursivePartialNull as MovedRecursivePartialNull } from "./types"
 import type * as types from "./types"
-import type {Contact, ContactInformation, Resume} from "./types"
+import type {Problem, Problems, Resume} from "./types"
 import type TypeBuilder from "./type_builder"
 import { DO_NOT_USE_DIRECTLY_UNLESS_YOU_KNOW_WHAT_YOURE_DOING_CTX, DO_NOT_USE_DIRECTLY_UNLESS_YOU_KNOW_WHAT_YOURE_DOING_RUNTIME } from "./globals"
 
@@ -46,13 +46,13 @@ export class BamlSyncClient {
   }
 
   
-  ExtractContactInformation(
+  ExtractClientProblems(
       transcript: string,
       __baml_options__?: { tb?: TypeBuilder, clientRegistry?: ClientRegistry }
-  ): ContactInformation {
+  ): Problems {
     try {
     const raw = this.runtime.callFunctionSync(
-      "ExtractContactInformation",
+      "ExtractClientProblems",
       {
         "transcript": transcript
       },
@@ -60,7 +60,7 @@ export class BamlSyncClient {
       __baml_options__?.tb?.__tb(),
       __baml_options__?.clientRegistry,
     )
-    return raw.parsed(false) as ContactInformation
+    return raw.parsed(false) as Problems
     } catch (error: any) {
       throw toBamlError(error);
     }

@@ -1,0 +1,72 @@
+[
+  {
+    "Social_Need_Domain": "Housing Instability",
+    "Name": "Rent Arrears",
+    "Description": "Three months behind on rent at Mary's Place housing. At risk of eviction within 60 days if not caught up.",
+    "Priority": 1,
+    "Confidence": 0.95
+  },
+  {
+    "Social_Need_Domain": "Employment",
+    "Name": "Unemployment",
+    "Description": "Currently unemployed and seeking work to generate income for rent payments.",
+    "Priority": 1,
+    "Confidence": 0.9
+  },
+  {
+    "Social_Need_Domain": "Childcare",
+    "Name": "Child Supply Needs",
+    "Description": "Difficulty affording essential supplies for children including diapers and clothing.",
+    "Priority": 2,
+    "Confidence": 0.85
+  },
+  {
+    "Social_Need_Domain": "Financial Resource Strain",
+    "Name": "Financial Instability",
+    "Description": "Unable to afford essential needs and experiencing financial stress due to housing costs.",
+    "Priority": 2,
+    "Confidence": 0.9
+  },
+  {
+    "Social_Need_Domain": "Food Insecurity",
+    "Name": "Limited Food Access",
+    "Description": "May have difficulty accessing adequate food due to financial constraints.",
+    "Priority": 3,
+    "Confidence": 0.7
+  },
+  {
+    "Social_Need_Domain": "Transportation Challenges",
+    "Name": "Potential Transport Barriers",
+    "Description": "May face difficulties accessing transportation to work opportunities.",
+    "Priority": 3,
+    "Confidence": 0.6
+  },
+  {
+    "Social_Need_Domain": "Education",
+    "Name": "Job Training Needs",
+    "Description": "Could benefit from job training programs to increase employability.",
+    "Priority": 2,
+    "Confidence": 0.75
+  },
+  {
+    "Social_Need_Domain": "Social Isolation & Supports",
+    "Name": "Limited Support Network",
+    "Description": "Limited mentions of family or friend support systems in conversation.",
+    "Priority": 4,
+    "Confidence": 0.5
+  },
+  {
+    "Social_Need_Domain": "Utility Needs",
+    "Name": "Potential Utility Issues",
+    "Description": "Financial strain may lead to difficulty paying utility bills.",
+    "Priority": 3,
+    "Confidence": 0.65
+  },
+  {
+    "Social_Need_Domain": "Socio-Demographic Information",
+    "Name": "Basic Demographics",
+    "Description": "28-year-old individual living in Seattle with children, connected with Mary's Place.",
+    "Priority": 5,
+    "Confidence": 0.95
+  }
+]

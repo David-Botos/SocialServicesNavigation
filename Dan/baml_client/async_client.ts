@@ -45,13 +45,13 @@ export class BamlAsyncClient {
   }
 
   
-  async ExtractClientProblems(
+  async ExtractProblems(
       transcript: string,
       __baml_options__?: { tb?: TypeBuilder, clientRegistry?: ClientRegistry }
   ): Promise<Problems> {
     try {
       const raw = await this.runtime.callFunction(
-        "ExtractClientProblems",
+        "ExtractProblems",
         {
           "transcript": transcript
         },
@@ -91,13 +91,13 @@ class BamlStreamClient {
   constructor(private runtime: BamlRuntime, private ctx_manager: BamlCtxManager) {}
 
   
-  ExtractClientProblems(
+  ExtractProblems(
       transcript: string,
       __baml_options__?: { tb?: TypeBuilder, clientRegistry?: ClientRegistry }
   ): BamlStream<partial_types.Problems, Problems> {
     try {
       const raw = this.runtime.streamFunction(
-        "ExtractClientProblems",
+        "ExtractProblems",
         {
           "transcript": transcript
         },

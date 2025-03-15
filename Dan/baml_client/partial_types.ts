@@ -35,15 +35,15 @@ export interface StreamState<T> {
 export namespace partial_types {
     
     export interface Problem {
-        social_need_domain?: ("" | "" | null)
-        name_of_problem?: (string | null)
+        social_need_domain?: ("Housing Instability" | "Employment" | "Childcare" | "Financial Resource Strain" | "Food Insecurity" | "Transportation Challenges" | "Education" | "Social Isolation & Supports" | "Utility Needs" | "Socio-Demographic Information" | null)
+        name?: (string | null)
         description?: (string | null)
         priority?: (number | null)
         confidence?: (number | null)
     }
     
     export interface Problems {
-        contacts?: (partial_types.Problem | null)[]
+        problems?: (partial_types.Problem | null)[]
     }
     
     export interface Resume {

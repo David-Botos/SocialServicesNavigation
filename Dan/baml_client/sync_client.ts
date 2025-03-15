@@ -46,13 +46,13 @@ export class BamlSyncClient {
   }
 
   
-  ExtractClientProblems(
+  ExtractProblems(
       transcript: string,
       __baml_options__?: { tb?: TypeBuilder, clientRegistry?: ClientRegistry }
   ): Problems {
     try {
     const raw = this.runtime.callFunctionSync(
-      "ExtractClientProblems",
+      "ExtractProblems",
       {
         "transcript": transcript
       },

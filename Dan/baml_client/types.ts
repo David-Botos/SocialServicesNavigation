@@ -46,8 +46,8 @@ export function get_checks<CheckName extends string>(checks: Record<CheckName, C
     return Object.values(checks)
 }
 export interface Problem {
-  social_need_domain: "" | ""
-  name_of_problem: string
+  social_need_domain: "Housing Instability" | "Employment" | "Childcare" | "Financial Resource Strain" | "Food Insecurity" | "Transportation Challenges" | "Education" | "Social Isolation & Supports" | "Utility Needs" | "Socio-Demographic Information"
+  name: string
   description: string
   priority: number
   confidence: number
@@ -55,7 +55,7 @@ export interface Problem {
 }
 
 export interface Problems {
-  contacts: Problem[]
+  problems: Problem[]
   
 }
 
